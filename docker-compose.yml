@@ -1,0 +1,52 @@
+version: '3.8'
+x-logging: &default-logging
+  options:
+    max-size: "10m"
+    max-file: "3"
+  driver: json-file
+
+services:
+  management:
+    build:
+      context: .
+      dockerfile: ./backend/apps/phishing-management/Dockerfile
+      target: development
+    command: npm run start phishing-management
+    ports:
+      - "3000:3000"
+    logging: *default-logging
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - app-network
+
+  simulation:
+    build:
+      context: .
+      dockerfile: ./backend/apps/phishing-simulation/Dockerfile
+      target: development
+    command: npm run start phishing-simulation
+    ports:
+      - "3001:3001"
+
+    logging: *default-logging
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - app-network
+
+  ui:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+      target: production
+    ports:
+      - "3006:80"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

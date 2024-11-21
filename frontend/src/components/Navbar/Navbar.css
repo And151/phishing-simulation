@@ -1,0 +1,24 @@
+
+.navbar {
+    background-color: #6a1b9a; /* Purple color */
+    height: 60px; /* Small navbar */
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is always on top */
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.navbar-title {
+    color: white;
+    font-size: 18px; /* Smaller title */
+}
+
+.logout-btn {
+    color: white;
+}

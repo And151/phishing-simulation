@@ -1,0 +1,95 @@
+/* src/components/Attempts.css */
+
+/* Page container */
+.attempts {
+    display: flex;
+    flex-direction: column;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    margin-top: 60px; /* Offset the content below the fixed navbar */
+}
+
+/* Table Section */
+.table-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.table-container {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.section-title {
+    color: #6a1b9a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #6a1b9a;
+    color: #ffffff;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1e6f0;
+}
+
+/* Form Section */
+.form-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.input-field {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #4a148c;
+}

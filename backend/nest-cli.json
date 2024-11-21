@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/phishing-simulation/src",
+  "monorepo": true,
+  "root": "apps/phishing-simulation",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/phishing-simulation/tsconfig.app.json"
+  },
+  "projects": {
+    "phishing-simulation": {
+      "type": "application",
+      "root": "apps/phishing-simulation",
+      "entryFile": "main",
+      "sourceRoot": "apps/phishing-simulation/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/phishing-simulation/tsconfig.app.json"
+      }
+    },
+    "phishing-api-gateway": {
+      "type": "application",
+      "root": "apps/phishing-api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/phishing-api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/phishing-api-gateway/tsconfig.app.json"
+      }
+    },
+    "phishing-management": {
+      "type": "application",
+      "root": "apps/phishing-management",
+      "entryFile": "main",
+      "sourceRoot": "apps/phishing-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/phishing-management/tsconfig.app.json"
+      }
+    }
+  }
+}
