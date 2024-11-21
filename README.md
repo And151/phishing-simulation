@@ -35,7 +35,7 @@ To quickly spin up both microservices and get them running, follow these steps:
 
 1. Clone this repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/And151/phishing-simulation.git
    cd phishing-simulation-app
 
 2. Run the application:
